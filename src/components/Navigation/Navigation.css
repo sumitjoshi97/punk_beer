@@ -1,0 +1,11 @@
+.navigation {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  background-color: #36f;
+  justify-content: flex-end;
+  line-height: 3.2rem; }
+  .navigation__link {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #fff; }
