@@ -1,0 +1,52 @@
+.beers {
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 12rem;
+        top: 10rem;
+
+        &__beer{
+            position: relative;
+            height: 22rem;
+            width: 18rem;
+            margin: 2rem;
+            padding: 1rem;
+            border: 1px solid transparent;
+            border-radius: 0.4rem;
+            -webkit-border-radius: 0.4rem;
+            -moz-border-radius: 0.4rem;
+            -ms-border-radius: 0.4rem;
+            -o-border-radius: 0.4rem;
+            box-shadow: 0.5rem 0.5rem 1rem rgba(#000, 0.2);
+
+            &--fav-btn {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                width: 2rem;
+                height: 2rem;
+                background-color: red;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            &--image{
+                height: 13rem;
+                width: 16rem;
+                display: flex;
+                justify-content: center;
+                
+                & img {
+                    height:inherit;
+                }
+            }
+
+            &--name{
+                padding: 2rem;
+            }
+        }
+    }
+}
