@@ -1,15 +1,14 @@
 import * as actionTypes from './actionTypes';
 import axios from 'axios';
 
-export default fetchAllBeersSuccess = data => {
+export const fetchAllBeersSuccess = data => {
     return {
         type: actionTypes.FETCH_ALL_BEERS_SUCCESS,
         beers: data
     }
 }
 
-
-export default fetchAllBeers = () => {
+export const fetchAllBeers = () => {
     return dispatch => {
         axios
             .get('https://api.punkapi.com/v2/beers/')
@@ -18,14 +17,14 @@ export default fetchAllBeers = () => {
     }
 }
 
-export default addFavoriteBeer = beer => {
+export const addFavoriteBeer = beer => {
     return {
         type: actionTypes.ADD_FAVORITE_BEER,
         beer: beer
     }
 }
 
-export default fetchFavoriteBeer = (id) => {
+export const fetchFavoriteBeer = (id) => {
     return dispatch => {
         axios
             .get(`https://api.punkapi.com/v2/beers/${id}`)
