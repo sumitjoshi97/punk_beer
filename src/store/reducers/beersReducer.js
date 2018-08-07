@@ -2,7 +2,7 @@ import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
     beers: null,
-    favorites: null
+    favorites: []
 }
 
 const fetchAllBeersSuccess = (state, action) => {
@@ -12,12 +12,12 @@ const fetchAllBeersSuccess = (state, action) => {
 }
 
 const addFavoriteBeer = (state, action) => {
-    const favorites = [...state.favorites, action.beer]
+    const favorites = state.favorites.concat(action.beer)
     return { ...state,
         favorites: favorites}
 }
 
-export default reducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     
     switch (action.type) {
         case actionTypes.FETCH_ALL_BEERS_SUCCESS: return fetchAllBeersSuccess(state, action)
@@ -25,3 +25,5 @@ export default reducer = (state = initialState, action) => {
         default: return state
     }
 }
+
+export default reducer;
